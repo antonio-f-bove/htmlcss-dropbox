@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container-big {
+    width: 1200px;
+}
+.container-small {
+    width: 800px;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.fl {
+    float: left;
+}
+.fl-r {
+    float: right;
+}
+
+
+
+/* ======================== */
+
