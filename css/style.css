@@ -6,8 +6,6 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 12px;
     font-weight: 400;
-
-    font-family: "Font Awesome 5 Free";
 }
 
 .container-large {
@@ -30,13 +28,17 @@
 .fl-r {
     float: right;
 }
-.button {
-    display: inline-block;
-}
+
 .button a {
     display: inline-block;
     line-height: 28px;
     text-decoration: none;
+    padding: 0 15px;
+}
+.button.blue a {
+    background-color: #1f63ff;
+    color: #fff;
+    font-weight: normal; /* ??? */
 }
 
 .bold {
@@ -46,12 +48,12 @@
 
 /* ======================== */
 
-/* nav-bar */
 header {
     background-color: #add1ea;
     margin-bottom: 150px;
 }
 
+/* nav-bar */
 nav {
     height: 60px;
     line-height: 60px;
@@ -60,12 +62,9 @@ nav {
 }
 nav ul {
     list-style: none;
-    height: 100%;
 }
 nav li {
     display: inline-block;
-    text-decoration: none;
-    color: #000;
     margin: 0 10px;
 }
 nav li a {
@@ -74,19 +73,12 @@ nav li a {
     font-weight: bold;
 }
 nav .logo-container {
-    height: 60%;    /* cazz */
+    width: 80%;    /* cazz */
 }
 nav .logo-container img {   /* height da sistemare */
     vertical-align: middle;
     padding-bottom: 5px;
-    height: 40%;
-}
-
-.blue-button {
-    background-color: #1f63ff;
-    color: #fff;
-    font-weight: normal; /* ??? */
-    padding: 0 15px;
+    width: 100%;;
 }
 
 /* jumbotron */
@@ -135,25 +127,30 @@ nav .logo-container img {   /* height da sistemare */
 }
 
 /* pricing columns */
+.pricing .column {
+    height: 700px; /* arbitraria*/
+}
 .pricing .column > * {
     border: 1px solid #ccc;
-    padding: 20px 10px;
+    padding: 20px 20px;
 }
-.pricing .column {
-    font-size: 16px;
+.pricing .column.small {
+    width: calc(100% / 3 - 40px);
+}
+#col2 {
+    margin: 0 20px; /* gutter */
 }
 
+.pricing .col-body {
+    height: 100%;
+}
 .pricing .col-head {
     font-size: 16px;
     padding: 5px 10px;
-}
-.pricing .column .col-head::before {
-    content: "\f007   ";
-    font-weight: 500;
     text-align: center;
 }
 
-.pricing .column h3 {
+.pricing h3 {
     font-size: 20px;
     font-weight: bold;
     margin: 10px 0;
@@ -164,15 +161,101 @@ nav .logo-container img {   /* height da sistemare */
     margin: 10px 0 30px;
 }
 
-.pricing .users.num::before {
+/* 2 classi valide per entrambi gli ul di pricing */
+.pricing ul {
+    list-style: none;
+}
+.pricing ul li {
+    margin: 20px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+/* icone grandi un po porkaround*/
+#col1 .col-head::before {
+    font-family: "Font Awesome 5 Free";
     content: "\f007   ";
     font-weight: 500;
 }
-.pricing .users.mem-size::before {
+#col2 .col-head::before, #col3 .col-head::before, .column.large .col-head::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f1ad   ";
+    font-weight: 500;
+}
+.column.large .col-head::before {
+    font-family: "Font Awesome 5 Free";
     content: "\f007   ";
     font-weight: 500;
 }
-.pricing .users.functions::before {
-    content: "\f007   ";
+
+/* icone piccole */
+.user::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f007";
     font-weight: 500;
+    position: absolute;
+    left: 2px;
+    top: 2px;
 }
+.folder::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f07b";
+    font-weight: 500;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+}
+.pencil::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f303";
+    font-weight: 900;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+}
+.user-plus::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f007";
+    font-weight: 500;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+}
+.smile::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f118";
+    font-weight: 500;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+}
+.check::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+    font-weight: 900;
+    color: #1f63ff;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+}
+
+
+.pricing .button.blue {
+    width: 100%;
+    margin: 30px 0 20px;
+}
+.pricing .button.blue a {
+    width: 100%;
+    text-align: center;
+}
+
+.pricing hr {
+    width: 20%;
+    margin: 30px 0;
+    color: #ccc;
+}
+
+.pricing h4 {
+    font-weight: 800;
+}
+
