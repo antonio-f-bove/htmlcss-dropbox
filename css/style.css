@@ -127,18 +127,25 @@ nav .logo-container img {   /* height da sistemare */
 }
 
 /* pricing columns */
-.pricing .column {
-    height: 700px; /* arbitraria*/
+.pricing .column.small {
+    height: 800px; /* arbitraria*/
 }
+
+.pricing .column {
+    margin-bottom: 60px;  /* se lo tolgo si rompe */
+}
+
 .pricing .column > * {
     border: 1px solid #ccc;
     padding: 20px 20px;
 }
+
 .pricing .column.small {
-    width: calc(100% / 3 - 40px);
+    width: calc(100% / 3 - 20px);
 }
 #col2 {
-    margin: 0 20px; /* gutter */
+    margin-left: 30px; /* gutter */
+    margin-right: 30px; /* gutter */
 }
 
 .pricing .col-body {
@@ -259,3 +266,13 @@ nav .logo-container img {   /* height da sistemare */
     font-weight: 800;
 }
 
+.column.large {
+    margin: 20px 0 50px;
+}
+
+.column.large .text-container{
+    width: 70%;
+}
+.column.large .button{
+    width: 30%;
+}
