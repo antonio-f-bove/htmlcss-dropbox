@@ -33,7 +33,6 @@
     display: inline-block;
     line-height: 28px;
     text-decoration: none;
-    padding: 0 15px;
     text-align: center;
 }
 .button.blue a {
@@ -85,6 +84,9 @@ nav .logo-container img {   /* height da sistemare */
     padding-bottom: 5px;
     width: 100%;;
 }
+nav .button a{
+    padding: 0 15px;
+}
 
 /* jumbotron */
 .jumbotron h1 {
@@ -102,6 +104,9 @@ nav .logo-container img {   /* height da sistemare */
 }
 .jumbotron .text-container .button {
    margin-bottom: 10px;
+}
+.jumbotron .text-container .button a {
+    padding: 0 15px;
 }
 
 .jumbotron .text-container .icon i {
@@ -278,25 +283,36 @@ nav .logo-container img {   /* height da sistemare */
 
 /* partner finder */
 
-.partner-finder img-container {
+.partner-finder .img-container {
     width: 50%;
 }
-.partner-finder img-container img {
+.partner-finder .img-container img {
     width: 100%;
 }
 
-.partner-finder text-container {
+.partner-finder .text-container {
     width: 50%;
 }
 
-.button.white {
+.partner-finder .button.white {
     border: 1px solid black;
+    display: inline-block;
+    padding: 0 15px;
 }
 
+
+/* operations */
 
 .operations .item-operations {
-    width: calc(100% / 3 -20px);
+    width: calc(100% / 3 - 20px);
 }
+.operations .item-operations::nth-of-type(2) {
+    margin: 0 30px;
+}
+
 .item-operations .img-container {
+    width: 100%;
+}
+.item-operations .img-container img {
     width: 100%;
 }
