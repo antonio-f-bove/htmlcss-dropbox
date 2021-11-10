@@ -33,6 +33,10 @@
     margin-left: 30px;
     margin-right: 30px;
 }
+.gutter-25 {
+    margin-left: 25px;
+    margin-right: 25px;
+}
 
 .button a {
     display: inline-block;
@@ -488,3 +492,56 @@ nav .button a{
 
 /* footer */
 
+footer {
+    background-color: #000;
+    color: #fff;
+
+    height: 390px;
+    /* position: fixed; */
+    /* z-index: -1; */
+}
+
+footer .container-large {
+    padding: 50px 0;
+}
+
+footer h3 {
+    font-size: 16px;
+    margin: 20px 0;
+}
+footer p {
+    font-size: 10px;
+    margin: 5px 0;
+}
+
+footer .column {
+    width: calc(100% / 5);
+}
+
+footer .short-hr {
+    width: 80px;
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+
+footer .language {
+    font-size: 10px;
+    color: #999;
+    position: relative;
+}
+
+footer .language::after {
+    content: "";
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid #999;
+    position: absolute;
+    right: -7px;
+    top: 6px;
+}
+
+footer .language::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f57d";
+    font-weight: 900;
+}
